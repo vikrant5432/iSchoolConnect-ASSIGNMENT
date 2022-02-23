@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <script>
+      function siv(source, target) {
+        document.getElementById(target).textContent = source.value;
+      }
+    </script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>FILL THE FORM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Text <br /><input type="text" oninput="siv(this,'text')" /></td>
+          <td><output id="text"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Range <br /><input
+              type="range"
+              oninput="siv(this,'range')"
+              value="50"
+            />
+          </td>
+          <td><output id="range"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Color <br /><input type="color" oninput="siv(this,'color')" />
+          </td>
+          <td><output id="color"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Search <br /><input type="search" oninput="siv(this,'search')" />
+          </td>
+          <td><output id="search"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Number <br /><input type="number" oninput="siv(this,'number')" />
+          </td>
+          <td><output id="number"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            eMail <br /><input type="email" oninput="siv(this,'email')" />
+          </td>
+          <td><output id="email"></output></td>
+        </tr>
+
+        <tr>
+          <td>URL <br /><input type="url" oninput="siv(this,'url')" /></td>
+          <td><output id="url"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Month <br /><input type="month" oninput="siv(this,'month')" />
+          </td>
+          <td><output id="month"></output></td>
+        </tr>
+
+        <tr>
+          <td>Time <br /><input type="time" oninput="siv(this,'time')" /></td>
+          <td><output id="time"></output></td>
+        </tr>
+
+        <tr>
+          <td>Date <br /><input type="date" oninput="siv(this,'date')" /></td>
+          <td><output id="date"></output></td>
+        </tr>
+
+        <tr>
+          <td>
+            Date Time local <br /><input
+              type="datetime-local"
+              oninput="siv(this,'datetime-local')"
+            />
+          </td>
+          <td><output id="datetime-local"></output></td>
+        </tr>
+
+        <tr>
+          <td>Week <br /><input type="week" oninput="siv(this,'week')" /></td>
+          <td><output id="week"></output></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
