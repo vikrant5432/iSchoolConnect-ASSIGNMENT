@@ -1,6 +1,6 @@
 # iSchoolConnect-ASSIGNMENT
-All Assignment done throughout the session and after the session.
-Topics are:-
+All Assignment are done throughout the session and after the session.
+Tech are:-
 HTML
 CSS
 REACT
