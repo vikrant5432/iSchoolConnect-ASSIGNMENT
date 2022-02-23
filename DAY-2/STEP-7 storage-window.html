@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STORAGE</title>
+    <script>
+      //   var name = "";
+      addEventListener("load", init);
+
+      function init() {
+        document
+          .getElementsByTagName("button")[0]
+          .addEventListener("click", clickHandler);
+
+        document
+          .getElementsByTagName("button")[1]
+          .addEventListener("click", getHander);
+      }
+
+      function clickHandler() {
+        window.user = document.getElementById("name").value;
+      }
+      function getHander() {
+        alert("user name is" + window.user);
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="name" />
+      <button>store it</button>
+      <hr />
+      <button>get from storage</button>
+    </div>
+  </body>
+</html>

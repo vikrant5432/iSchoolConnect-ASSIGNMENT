@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEOLOCATION</title>
+
+    <script>
+      addEventListener("load", init);
+      function init() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            sucessFunction,
+            failFunction,
+            {
+              enableHighAccuracy: true,
+              timeout: 4000,
+              maximumAge: 5000,
+            }
+          );
+        } else {
+          alert("PLEASE UPDATE!");
+        }
+      }
+
+      function sucessFunction(pos) {
+        document.getElementById("ret").textContent = pos.timestamp;
+        document.getElementById("lot").textContent = pos.coords.longitude;
+        document.getElementById("lat").textContent = pos.coords.langitude;
+        document.getElementById("Act").textContent = pos.coords.accuracy;
+      }
+      function failFunction(err) {
+        document.getElementById("error").textContent = err.message;
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <h2>Request time: <span id="ret"></span></h2>
+      <h2>Longitude: <span id="lot"></span></h2>
+      <h2>Latitude: <span id="lat"></span></h2>
+      <h2>Accuracy: <span id="Act"></span></h2>
+    </div>
+    <hr />
+    <div>
+      <h2>ERROR: <span id="error"></span></h2>
+    </div>
+  </body>
+</html>
