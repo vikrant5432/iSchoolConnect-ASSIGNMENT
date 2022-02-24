@@ -17,6 +17,7 @@
       var can, ctx;
       addEventListener("load", init);
       function init() {
+        //SQUARE SHAPE
         can = document.getElementsByTagName("canvas")[0];
         can.width = 300;
         can.height = 300;
@@ -46,6 +47,7 @@
         ctx.stroke();
         ctx.fill();
 
+        //TRAINGLE SHAPE
         can = document.getElementsByTagName("canvas")[1];
         can.width = 400;
         can.height = 400;
@@ -62,15 +64,13 @@
         ctx.moveTo(100 - 40, 100 + 50);
         ctx.lineTo(300 - 40, 300 + 50);
         ctx.lineTo(100 - 40, 300 + 50);
-        // ctx.beginPath();
-        // ctx.moveTo(100, 100);
-
         ctx.closePath();
 
         ctx.strokeStyle = "Green";
         ctx.lineWidth = "10";
         ctx.stroke();
 
+        //CIRCLE FACE SHAPE
         can = document.getElementsByTagName("canvas")[2];
         can.width = 400;
         can.height = 400;
@@ -88,12 +88,45 @@
         ctx.moveTo(220, 75);
         ctx.arc(200, 75, 20, 0, Math.PI * 2, true); //right eye
 
-        
+        ctx.stroke();
+
+        //BOAT SHAPE
+        can = document.getElementsByTagName("canvas")[3];
+        can.width = 500;
+        can.height = 500;
+        ctx = can.getContext("2d");
+
+        ctx.beginPath();
+        ctx.moveTo(210, 180);
+        ctx.lineTo(180, 250);
+        ctx.lineTo(230, 250);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.moveTo(300, 220);
+        ctx.lineTo(280, 250);
+        ctx.lineTo(310, 250);
+        ctx.fillStyle = "rgba(0,0,255,0.5)";
+        ctx.fill();
+        ctx.closePath();
+
+  
+        ctx.moveTo(150, 250);
+        ctx.lineTo(350, 250);
+        ctx.lineTo(300, 300);
+        ctx.lineTo(200, 300);
+        ctx.lineTo(150, 250);
+        ctx.fill();
+        ctx.closePath();
+
         ctx.stroke();
       }
     </script>
   </head>
   <body>
+    <canvas></canvas>
     <canvas></canvas>
     <canvas></canvas>
     <canvas></canvas>
