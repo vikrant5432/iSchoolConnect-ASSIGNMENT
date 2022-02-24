@@ -56,11 +56,14 @@
         ctx.moveTo(300 + 40, 100 - 50);
         ctx.lineTo(100 + 40, 100 - 50);
         ctx.lineTo(300 + 40, 300 - 50);
+        ctx.closePath();
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = "10";
         ctx.fillStyle = "rgba(0,0,255,0.5)";
         ctx.fill();
+        ctx.stroke();
 
-        ctx.closePath();
-
+        ctx.beginPath();
         ctx.moveTo(100 - 40, 100 + 50);
         ctx.lineTo(300 - 40, 300 + 50);
         ctx.lineTo(100 - 40, 300 + 50);
@@ -79,48 +82,61 @@
         ctx.arc(150, 150, 150, 0, Math.PI * 2, true); //outer circle
         ctx.moveTo(250, 150);
         ctx.arc(150, 150, 100, 0, Math.PI, false); //mouth
-        ctx.fillStyle = "rgba(0,0,255,0.5)";
-        ctx.fill();
         ctx.closePath();
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
 
+        ctx.beginPath();
         ctx.moveTo(95, 75);
         ctx.arc(75, 75, 20, 0, Math.PI * 2, true); //left eye
+        ctx.closePath();
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
         ctx.moveTo(220, 75);
         ctx.arc(200, 75, 20, 0, Math.PI * 2, true); //right eye
+        ctx.closePath();
+        ctx.fillStyle = "white";
+        ctx.fill();
 
         ctx.stroke();
 
         //BOAT SHAPE
         can = document.getElementsByTagName("canvas")[3];
-        can.width = 500;
-        can.height = 500;
+        can.width = 450;
+        can.height = 450;
         ctx = can.getContext("2d");
 
         ctx.beginPath();
         ctx.moveTo(210, 180);
         ctx.lineTo(180, 250);
         ctx.lineTo(230, 250);
+        ctx.closePath();
         ctx.fillStyle = "green";
         ctx.fill();
-        ctx.closePath();
+        ctx.stroke();
 
         ctx.beginPath();
         ctx.moveTo(300, 220);
         ctx.lineTo(280, 250);
         ctx.lineTo(310, 250);
+        ctx.closePath();
         ctx.fillStyle = "rgba(0,0,255,0.5)";
         ctx.fill();
-        ctx.closePath();
+        ctx.stroke();
 
-  
+        ctx.beginPath();
         ctx.moveTo(150, 250);
         ctx.lineTo(350, 250);
         ctx.lineTo(300, 300);
         ctx.lineTo(200, 300);
         ctx.lineTo(150, 250);
-        ctx.fill();
         ctx.closePath();
-
+        ctx.fillStyle = "red";
+        ctx.fill();
         ctx.stroke();
       }
     </script>
