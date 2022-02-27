@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :empty {
+        border: 1px solid green;
+      }
+      :root {
+        background-color: rgb(230, 219, 219);
+      }
+      p:first-child {
+        color: red;
+      }
+
+      ol > li:last-child {
+        border: 1px dotted rgb(0, 0, 0);
+      }
+
+      tr:nth-child(2n) {
+        background-color: yellow;
+      }
+      tr:nth-last-child(2n) {
+        background-color: lightgray;
+      }
+
+      article {
+        height: 500px;
+        border: 1px solid black;
+      }
+      .art-first img:nth-of-type(2n) {
+        float: right;
+      }
+      .art-first img:nth-of-type(2n + 1) {
+        float: left;
+      }
+
+      .art-second img:nth-last-of-type(1n) {
+        float: left;
+      }
+      .art-second img:nth-last-of-type(2) {
+        float: right;
+      }
+
+      div dl dt:first-of-type {
+        color: red;
+      }
+
+      .table tr > td:last-of-type {
+        color: red;
+      }
+
+      em:only-child {
+        background-color: yellow;
+      }
+
+      .only-type > h1:only-of-type {
+        background-color: yellow;
+      }
+      .only-type-second > h1:only-of-type {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore quas
+      consequatur quod et laboriosam suscipit aperiam facere nesciunt fugit quo
+    </p>
+    <p>
+      dolor voluptas eum accusamus fugiat, repellendus, nisi expedita. Quisquam,
+      ipsam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+      quidem sint incidunt expedita facere veniam aliquam rem accusamus sed
+      repudiandae. Officia in quos, hic dolorum laborum non sunt natus
+      accusantium?
+    </p>
+
+    <hr />
+
+    <ol>
+      <li>List-item 1</li>
+      <li>List-item 2</li>
+      <li>List-item 3</li>
+    </ol>
+
+    <hr />
+
+    <table>
+      <tr>
+        <td>This is first row.</td>
+      </tr>
+      <tr>
+        <td>This is second row.</td>
+      </tr>
+      <tr>
+        <td>This is third row.</td>
+      </tr>
+      <tr>
+        <td>This is fourth row.</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <article class="art-first">
+      <img src="images/antman.jpg" alt="" />
+      <br />
+      <img src="images/blackpanther.jpg" alt="" />
+      <br />
+      <img src="images/rajani.jpg" alt="" />
+    </article>
+
+    <article class="art-second">
+      <img src="images/blackwidow.jpg" alt="" />
+      <br />
+      <img src="images/deadpool.jpg" alt="" />
+      <br />
+      <img src="images/spiderman.jpg" alt="" />
+    </article>
+
+    <hr />
+    <div>
+      <p>loream at resrfe srse</p>
+      <dl>
+        <dt>gigogne</dt>
+        <dd>
+          <dl>
+            <dt>fusée</dt>
+            <dd>multistage rocket</dd>
+            <dt>table</dt>
+            <dd>nest of tables</dd>
+          </dl>
+        </dd>
+      </dl>
+    </div>
+
+    <hr />
+    <div class="table">
+      <p>2N table</p>
+      <table>
+        <tr>
+          <td>2</td>
+          <td>4</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>10</td>
+          <td>12</td>
+        </tr>
+      </table>
+      <p>table complete</p>
+    </div>
+
+    <hr />
+    <div>
+      <h1>Only-child example</h1>
+      <p>This is a <em>paragraph</em>.</p>
+      <p>This is a <em>time</em> <em>come</em> paragraph.</p>
+    </div>
+
+    <hr />
+    <div class="only-type">
+      <h1>Only-Type example</h1>
+      <p>This is a paragraph.</p>
+      <p>This is a paragraph.</p>
+    </div>
+
+    <hr />
+    <div class="only-type-second">
+      <h1>Only-Type second example</h1>
+      <p>This is a paragraph.</p>
+      <p>This is a paragraph.</p>
+      <h1>Only-Type second example</h1>
+    </div>
+  </body>
+</html>

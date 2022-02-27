@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Element</title>
+    <style>
+      body {
+        margin: 2px;
+      }
+
+      div {
+        margin-top: 10px;
+        border: 1px solid darkgray;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+
+    <script>
+      var can, ctx;
+      addEventListener("load", init);
+      function init() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(20, 20, 100, 100);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- 1. Block Element <section></section> and <p></p> and <h1>---<h6>-->
+
+    <div>
+      <h1>Block and inline Element</h1>
+      <div>
+        <section>
+          <h2>Lorem History</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+            assumenda, similique alias quaerat molestiae est in quibusdam non
+            dolores deserunt perferendis quam amet dolore dolorum tempora autem
+            beatae reiciendis laborum!
+          </p>
+        </section>
+      </div>
+
+      <!-- 2. Block Element <address></address> and inline Element <a></a> for link -->
+      <div>
+        <address>
+          Written by
+          <a href="mailto:webmaster@example.com">Vikrant Kumar</a>.<br />
+          Visit us at:<br />
+          webmaster@Example.com<br />
+          XYZ Bihar<br />
+          India
+        </address>
+      </div>
+
+      <!-- 3. Block Element <article></article> -->
+      <div>
+        <article>
+          <header>
+               
+            <h1>A heading here</h1>
+            <p>Posted by John Doe</p>
+            <p>Some additional information here</p>
+          </header>
+          <p>Lorem Ipsum dolor set amet....</p>
+        </article>
+      </div>
+
+      <!--4. Block Element <aside></aside> -->
+      <div>
+        <p id="lorem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <aside>
+          <h4>Epcot Center</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
+            illo nihil! Minima eum eaque esse veritatis quas ex, provident alias
+            inventore assumenda molestias facere iste odit neque, porro nam
+            harum!
+          </p>
+        </aside>
+      </div>
+
+      <!--Block Element <blockquote></blockquote> -->
+      <div>
+        <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+          For 50 years, WWF has been protecting the future of nature. The
+          world's leading conservation organization, WWF works in 100 countries
+          and is supported by 1.2 million members in the United States and close
+          to 5 million globally.
+        </blockquote>
+      </div>
+
+      <!-- <canvas></canvas> is Block ELement and <div></div> -->
+      <div>
+        <canvas id="myCanvas"></canvas>
+      </div>
+
+      <!-- <hr></hr> is Block Element -->
+      <div class="hr">
+        <h1>The Main Languages of the Web</h1>
+        <p>
+          HTML is the standard markup language for creating Web pages. HTML
+          describes the structure of a Web page, and consists of a series of
+          elements. HTML elements tell the browser how to display the content.
+        </p>
+        <hr />
+        <p>
+          CSS is a language that describes how HTML elements are to be displayed
+          on screen, paper, or in other media. CSS saves a lot of work, because
+          it can control the layout of multiple web pages all at once.
+        </p>
+      </div>
+
+      <!-- <dl></dl>, <dd></dd> and <dt></dt> is block element -->
+      <div>
+        <h3>The dl, dd, and dt elements</h3>
+
+        <p>These three elements are used to create a description list:</p>
+
+        <dl>
+          <dt>Coffee</dt>
+          <dd>Black hot drink</dd>
+          <dt>Milk</dt>
+          <dd>White cold drink</dd>
+        </dl>
+      </div>
+
+      <!-- <form></form>, <fieldset></fieldset> are Block element -->
+      <!-- </br>, legend, input, label are the block element -->
+      <div>
+        <h2>form Block element</h2>
+        <form action="#">
+          <fieldset>
+            <!-- legend is define the fieldset element caption -->
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" /><br />
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" /><br />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" /><br />
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" /><br />
+            <input type="submit" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+
+      <!-- <div></div>, <figure></figure>, <figcaption></figcaption> are the Block element -->
+      <!-- img is inline element -->
+      <div>
+        <h2>figure BLock element</h2>
+        <figure>
+          <img src="images/antman.jpg" alt="Trulli" style="width: 10%" />
+          <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+        </figure>
+      </div>
+      <!-- <footer></footer> block element -->
+      <div>
+        <h2>The footer Block element</h2>
+        <footer>
+          <p>
+            Author: Hege Refsnes<br />
+            <a href="mailto:hege@example.com">hege@example.com</a>
+          </p>
+        </footer>
+      </div>
+
+      <!-- <nav></nav> block element -->
+      <!-- <a></a> is inline element -->
+      <div>
+        <h2>The nav Block element</h2>
+        <p>The nav element defines a set of navigation links:</p>
+        <nav>
+          <a href="#">Google</a> | <a href="#">FaceBook</a> |
+          <a href="#">Tesla</a> |
+          <a href="#">Stripe</a>
+        </nav>
+      </div>
+
+      <!-- <ol></ol> and <ul></ul> and <li></li> is Block Element -->
+      <div>
+        <h2>The ol and ul and li Block selements</h2>
+
+        <p>The ol element defines an ordered list:</p>
+        <ol>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+
+        <p>The ul element defines an unordered list:</p>
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+      </div>
+
+      <!-- <main></main> is block element  -->
+      <div>
+        <h1>The main Block element</h1>
+
+        <main>
+          <h2>Most Popular Browsers</h2>
+          <p>Chrome is the most used browsers today.</p>
+
+          <article>
+            <h2>Google Chrome</h2>
+            <p>
+              Google Chrome is a web browser developed by Google, released in
+              2008. Chrome is the world's most popular web browser today!
+            </p>
+          </article>
+        </main>
+      </div>
+
+      <div>
+        <h2>The table element</h2>
+
+        <table>
+          <tr>
+            <th>Month</th>
+            <th>Savings</th>
+          </tr>
+          <tr>
+            <td>March</td>
+            <td>₹100</td>
+          </tr>
+          <tr>
+            <td>Augest</td>
+            <td>₹80</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <h1>The noscript Block Element</h1>
+
+        <p>
+          A browser with JavaScript disabled will show the text inside the
+          noscript element ("Hello World!" will not be displayed).
+        </p>
+
+        <script>
+          document.write("Hello World!");
+        </script>
+        <noscript>Sorry, your browser does not support JavaScript!</noscript>
+      </div>
+    </div>
+
+    <div>
+      <h1>Inline Element</h1>
+
+      <!-- <abbr></abbr> is inline Element -->
+      <div>
+        <h2>The abbr element</h2>
+
+        <p>
+          The <abbr title="World Health Organization">WHO</abbr> was founded in
+          1948.
+        </p>
+      </div>
+
+      <!-- <b> -->
+      <div>
+        <h1>
+          The b, strong, small, button, cite, code dfn, em, i, kbd, map, area,
+          q, object, samp
+          <strong>InLine</strong> element
+        </h1>
+
+        <hr />
+        <p>This is normal text - <b>and this is bold text</b>.</p>
+
+        <hr />
+        <p>This text is normal.</p>
+        <p><strong>This text is important!</strong></p>
+
+        <hr />
+        <p>This is some normal text.</p>
+        <p><small>This is some smaller text.</small></p>
+
+        <hr />
+        <button type="button" onclick="alert('Hello world!')">Click Me!</button>
+
+        <hr />
+        <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+        <hr />
+        <p>The HTML <code>button</code> tag defines a clickable button.</p>
+        <p>
+          The CSS <code>background-color</code> property defines the background
+          color of an element.
+        </p>
+
+        <hr />
+        <p>
+          <dfn>HTML</dfn> is the standard markup language for creating web
+          pages.
+        </p>
+
+        <hr />
+        <p>We <em>cannot</em> live like this.</p>
+
+        <hr />
+        <p><i>Lorem ipsum</i> is the most popular filler text in history.</p>
+
+        <hr />
+        <img src="images/batman1.jpg" alt="Batman" width="300" height="300" />
+
+        <hr />
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+        <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text (Mac OS).</p>
+
+        <hr />
+        <p>
+          Click on the computer, the phone, or the cup of coffee to go to a new
+          page and read more about the topic:
+        </p>
+
+        <img
+          src="images/workplace.jpg"
+          alt="Workplace"
+          usemap="#workmap"
+          width="400"
+          height="379"
+        />
+
+        <map name="workmap">
+          <area
+            shape="rect"
+            coords="34,44,270,350"
+            alt="Computer"
+            href="computer.html"
+          />
+        </map>
+
+        <hr />
+        <!-- container for an external resource -->
+        <object
+          data="images/hulk.jpg"
+          width="300"
+          height="200"
+          style="object-fit: contain"
+        ></object>
+
+        <hr />
+        <p>
+          lorem's is about:
+          <q>Build a future where people live in harmony with nature.</q>
+          We hope they succeed.
+        </p>
+
+        <hr />
+        <p>Message from my computer:</p>
+        <p>
+          <samp>File not found.<br />Press F1 to continue</samp>
+        </p>
+
+        <hr />
+        <form action="#">
+          <label for="cars">Choose a Sport:</label>
+          <select name="cars" id="cars">
+            <option value="Cricket">Cricket</option>
+            <option value="FootBall">FootBall</option>
+            <option value="BasketBall">BasketBall</option>
+            <option value="Table Tennis">Table Tennis</option>
+          </select>
+          <br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+
+        <hr />
+        <p>
+          My mother has
+          <span style="color: blue; font-weight: bold">blue</span>
+          eyes and my father has
+          <span style="color: darkolivegreen; font-weight: bold"
+            >dark green</span
+          >
+          eyes.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
