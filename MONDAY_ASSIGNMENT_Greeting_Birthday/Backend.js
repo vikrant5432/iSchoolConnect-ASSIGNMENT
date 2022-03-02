@@ -29,6 +29,9 @@ function create_star(i, j) {
   ctx.fill();
   ctx.stroke();
 }
+
+
+
 //Practice with external resource help
 //star ball
 var stars = [];
@@ -66,7 +69,8 @@ function loop(timeNow) {
     ctx.beginPath();
     ctx.arc(stars[i].x, stars[i].y, stars[i].r, 0, Math.PI * 2);
     ctx.fill();
-
+    
+    //x-update
     stars[i].x += stars[i].xv * timeDelta * 0.001;
 
     // changing the position of stars to the other side if it goes off screen
@@ -75,7 +79,8 @@ function loop(timeNow) {
     } else if (stars[i].x > canvas.width + stars[i].r) {
       stars[i].x = 0 - stars[i].r;
     }
-
+    
+    //y-update
     stars[i].y += stars[i].yv * timeDelta * 0.001;
 
     //changing the position of the stars to the other side if it goes off screen
