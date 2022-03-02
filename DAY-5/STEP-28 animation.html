@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      @keyframes Vikrant {
+        0% {
+          background-color: violet;
+          transform: rotate(32.8deg);
+        }
+        10% {
+          background-color: indigo;
+          transform: rotate(65.52deg);
+        }
+        20% {
+          background-color: blue;
+          transform: rotate(98.24deg);
+        }
+        30% {
+          background-color: green;
+          transform: rotate(130.96deg);
+        }
+        40% {
+          background-color: yellow;
+          transform: rotate(163.68deg);
+        }
+        50% {
+          background-color: orange;
+          transform: rotate(196.4deg);
+        }
+        60% {
+          background-color: red;
+          transform: rotate(229.12deg);
+        }
+        70% {
+          background-color: violet;
+          transform: rotate(261.84deg);
+        }
+        80% {
+          background-color: indigo;
+          transform: rotate(294.56deg);
+        }
+        90% {
+          background-color: blue;
+          transform: rotate(327.28deg);
+        }
+        100% {
+          background-color: green;
+          transform: rotate(360deg);
+        }
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: tomato;
+        margin: 100px auto;
+      }
+      .box:hover {
+        animation-name: Vikrant;
+        animation-duration: 1s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
