@@ -1,0 +1,23 @@
+body {
+  /* margin: 0px; */
+  background-color: aqua;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+.card_form {
+  background-color: #e658eb;
+  border: 2px solid black;
+  margin-bottom: 23px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  position: absolute;
+  right: 60px;
+}
+
+.card_form > form > label {
+  padding: 1px 4px;
+}
+button {
+  border-radius: 9px;
+  background-color: #b9ffa7;
+}
