@@ -9,23 +9,7 @@ var ctx = canvas.getContext("2d");
 canvas.height = 770;
 canvas.width = 800;
 
-//Practice with external resource help
-//star ball
-var stars = [];
-var starSpeed = STAR_SPEED * canvas.width;
-var xv = starSpeed * randomSign() * Math.random();
-// Using Pythagoras' theorem, yv = sqrt(starSpeed^2 - xv^2)
-var yv = Math.sqrt(Math.pow(starSpeed, 2) - Math.pow(xv, 2)) * randomSign();
-for (let i = 0; i < STAR_NUM; i++) {
-  let speedMult = Math.random() * 2 + 0.5;
-  stars[i] = {
-    r: (Math.random() * STAR_SIZE * canvas.width) / 2,
-    x: Math.floor(Math.random() * canvas.width),
-    y: Math.floor(Math.random() * canvas.height),
-    xv: xv * speedMult,
-    yv: yv * speedMult,
-  };
-}
+
 
 function create_star(i, j) {
   ctx.beginPath();
@@ -45,6 +29,24 @@ function create_star(i, j) {
   ctx.fill();
   ctx.stroke();
 }
+//Practice with external resource help
+//star ball
+var stars = [];
+var starSpeed = STAR_SPEED * canvas.width;
+var xv = starSpeed * randomSign() * Math.random();
+// Using Pythagoras' theorem, yv = sqrt(starSpeed^2 - xv^2)
+var yv = Math.sqrt(Math.pow(starSpeed, 2) - Math.pow(xv, 2)) * randomSign();
+for (let i = 0; i < STAR_NUM; i++) {
+  let speedMult = Math.random() * 2 + 0.5;
+  stars[i] = {
+    r: (Math.random() * STAR_SIZE * canvas.width) / 2,
+    x: Math.floor(Math.random() * canvas.width),
+    y: Math.floor(Math.random() * canvas.height),
+    xv: xv * speedMult,
+    yv: yv * speedMult,
+  };
+}
+
 
 //loops start
 var timeDelta,
