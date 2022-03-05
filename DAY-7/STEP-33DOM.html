@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script>
+      //window is global object so we don't need to write it
+      window.addEventListener("load", () => {
+        // const c = document.body.childNodes.length;
+        const c = document.body.children.length;
+        console.log(c);
+
+        // document.getElementsByTagName("p")[0].innerText = "Vikrant";
+        // document.body.children[3].children[0].innerText = "Vikrant";
+        console.log(
+          document.body.children[3].children[0].childNodes[0].nodeValue
+        );
+        console.log(document.body.children[3].children[0].textContent);
+        console.log(document.body.children[3].children[0].innerText);
+        console.log(document.body.children[3].children[0].innerHTML);
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, cumque
+      quam!Veritatis dolore ea dignissimos, omnis exercitationem quaerat.
+      Namdoloremque maxime voluptate. Optio eaque delectus consequatur?
+      Quisquam,cumque. Quod, recusandae!
+    </p>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab maximcommodi
+      magnam quod eligendi, praesentium quidem voluptates perferendis tenetur
+      quibusdam laboriosam veritatis cumque in autem cum nequeminus esse.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
+      repellataliquam distinctio dolorum nobis, laboriosam, voluptatibus
+      minimavoluptates nisi maiores, soluta modi? Explicabo quisquam
+      rationeconsequatur possimus a modi praesentium!
+    </p>
+    <ul>
+      <li>List Item 1 <span>time come</span></li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
+    </ul>
+  </body>
+</html>
