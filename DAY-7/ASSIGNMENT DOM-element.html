@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM element-practice</title>
+  </head>
+
+  <style>
+    div {
+      border: 1px solid;
+      margin: 5px 5px;
+    }
+  </style>
+
+  <script>
+    addEventListener("load", () => {
+      function get_doc_title() {
+        const title = document.title;
+        const element = document.createElement("div");
+        element.innerText = "Title of Document:- " + title;
+        document.body.appendChild(element);
+        console.log("title is loaded");
+      }
+      get_doc_title();
+
+      function get_doc_forms() {
+        // const form = document.forms[0];
+        // const form = document.forms["Form_for_Doc"];
+        const form = document.Form_for_Doc;
+        const element = document.createElement("div");
+        element.innerText =
+          "form is selected :- " +
+          form.name +
+          " which contain total tags:-" +
+          form.elements.length;
+        document.body.appendChild(element);
+      }
+      get_doc_forms();
+
+      function get_doc_images() {
+        const image = document.images[0];
+        const element = document.createElement("div");
+        element.innerText =
+          "image class name is:" +
+          image.className +
+          " which src is :- " +
+          image.src;
+        document.body.appendChild(element);
+      }
+      get_doc_images();
+
+      function get_doc_script() {
+        const script = document.scripts;
+        if (script.length) {
+          alert("this page contain script");
+        }
+      }
+      get_doc_script();
+
+      function get_doc_link() {
+        const link = document.links[0];
+        const element = document.createElement("div");
+        element.innerText = "link txt:- " + link.text;
+        document.body.appendChild(element);
+      }
+      get_doc_link();
+
+      document.cookie = "name=oeschger; SameSite=None; Secure";
+      document.cookie = "favorite_food=tripe; SameSite=None; Secure";
+      function get_doc_cookie() {
+        const cookie = document.cookie;
+        const element = document.createElement("div");
+        element.innerText = cookie;
+        document.body.appendChild(element);
+      }
+      get_doc_cookie();
+    });
+  </script>
+
+  <body>
+    <form action="#" name="Form_for_Doc">
+      <input type="text" placeholder="Vikrant" name="vikrant" />
+      <input type="email" name="email" placeholder="xxx@example.com" />
+      <input type="tel" name="phone" placeholder="### #### ###" />
+      <button>Submit</button>
+    </form>
+
+    <img src="images/doctorstrange.jpg" alt="" class="Image_doc" />
+
+    <a href="http://google.com">Let Google</a>
+
+    <hr />
+    <!-- <code id="cookies"></code> -->
+  </body>
+</html>
