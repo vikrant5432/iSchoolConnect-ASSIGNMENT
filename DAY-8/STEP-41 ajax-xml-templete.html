@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax XML</title>
+
+    <style>
+      button {
+        /* display: flex;
+        align-items: center; */
+        /* float: left; */
+        position: relative;
+        left: 39pc;
+        font-family: "Lucida Sans";
+        width: 20%;
+      }
+      #log {
+        width: 1000px;
+        height: 400px;
+        background-color: darkgray;
+        margin: 30px auto;
+        /* scroll-behavior: auto; */
+        overflow: scroll;
+      }
+
+      .box {
+        width: 300px;
+        background-color: lightgray;
+        float: left;
+        margin: 13px;
+      }
+
+      .box h1 {
+        margin: 0px;
+        padding: 10px;
+        text-align: center;
+        font-family: "Franklin Gothic Medium";
+        background-color: rgb(12 12 11 / 65%);
+        color: #00a8ff;
+      }
+
+      .box h2 {
+        margin: 8px 0px;
+        font-family: "Franklin Gothic Medium";
+        font-size: 20px;
+        font-weight: bolder;
+        color: rgb(37, 36, 36);
+        text-align: center;
+      }
+      .box h3 {
+        margin: 10px;
+        font-family: "Franklin Gothic Medium";
+        font-size: 18px;
+        color: rgb(37, 36, 36);
+      }
+      .box img {
+        width: 300px;
+      }
+    </style>
+
+    <script>
+      var jax = new XMLHttpRequest();
+      //listen to any change happen
+      jax.onreadystatechange = function () {
+        console.log("ReadyStatus value:-", jax.readyState);
+        if (jax.status == 200 && jax.readyState == 4) {
+          var name = jax.responseXML.getElementsByTagName("hl");
+          for (var i = 0; i < name.length; i++) {
+            document.getElementById("log").innerHTML +=
+              "<div class='box'><h1>" +
+              name[i].querySelector("title").textContent +
+              "</h1><h2>" +
+              name[i].querySelector("firstname").textContent +
+              " " +
+              name[i].querySelector("lastname").textContent +
+              "</h2><img src='" +
+              name[i].querySelector("poster").innerHTML +
+              "' alt='" +
+              name[i].querySelector("title").textContent +
+              "' /><h3>City: " +
+              name[i].querySelector("city").textContent +
+              "</h3> <h3>Tick Price: " +
+              name[i].querySelector("ticketprice").textContent +
+              "</h3><h3>Release Date: " +
+              name[i].querySelector("releasedate").textContent +
+              "</h3></div>";
+          }
+        } else {
+          console.log(jax.readyState);
+        }
+      };
+      document.addEventListener("DOMContentLoaded", () => {
+        // jax.open("get", "data.txt", false);
+        document
+          .getElementsByTagName("button")[0]
+          .addEventListener("click", () => {
+            jax.open("get", "data.xml", true);
+            jax.send();
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Fetch Data</button>
+    <hr />
+    <div id="log"></div>
+    <!-- <ol id="hl"></ol> -->
+  </body>
+</html>

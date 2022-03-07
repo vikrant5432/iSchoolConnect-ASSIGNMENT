@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax XML</title>
+
+    <style>
+      button {
+        /* display: flex;
+        align-items: center; */
+        /* float: left; */
+        position: relative;
+        left: 39pc;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        width: 20%;
+      }
+      #log {
+        width: 600px;
+        height: 200px;
+        background-color: darkgray;
+        margin: 30px auto;
+        /* scroll-behavior: auto; */
+        overflow: scroll;
+      }
+    </style>
+
+    <script>
+      var jax = new XMLHttpRequest();
+      //listen to any change happen
+      jax.onreadystatechange = function () {
+        console.log("ReadyStatus value:-", jax.readyState);
+        if (jax.status == 200 && jax.readyState == 4) {
+          //   document.getElementById("log").innerText = jax.responseXML;
+          var name = jax.responseXML.getElementsByTagName("hl");
+          for (var i = 0; i < name.length; i++) {
+            document.getElementById("hl").innerHTML +=
+              "<li>" +
+              name[i].getElementsByTagName("title")[0].firstChild.nodeValue +
+              "</li>";
+          }
+        } else {
+          console.log(jax.statusText);
+          //   document.getElementById("log").innerText += "status:- ";
+          //   jax.status + "ajax statu text:- " + jax.statusText;
+        }
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // jax.open("get", "data.txt", false);
+        document
+          .getElementsByTagName("button")[0]
+          .addEventListener("click", () => {
+            jax.open("get", "data.xml", true);
+            jax.send();
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <button>Fetch Data</button>
+    <hr />
+    <!-- <div id="log"></div> -->
+    <ol id="hl"></ol>
+  </body>
+</html>
