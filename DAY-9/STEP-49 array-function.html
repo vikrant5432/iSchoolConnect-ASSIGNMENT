@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array function</title>
+  </head>
+  <body>
+    <script>
+      var vals = [45, 23, 24, 49, 23, 65, 07, 99, 34, 44, 08, 53];
+
+      //foreach
+      //   vals.forEach((val) => console.log(val));
+
+      //map
+      var dobVal = vals.map((e) => e * 2);
+      console.log(dobVal);
+      console.log(vals);
+
+      //filter
+      var greaterValueThan50 = vals.filter((e) => e > 50);
+      console.log(greaterValueThan50);
+
+      //every
+      var allValueGreaterThan5 = vals.every((e) => e > 5);
+      console.log(allValueGreaterThan5);
+
+      //some
+      var someValueGreaterThan50 = vals.some((e) => e > 50);
+      console.log(someValueGreaterThan50);
+    </script>
+  </body>
+</html>

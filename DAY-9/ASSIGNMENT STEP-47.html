@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASSIGNMENT</title>
+    <script>
+      //1-Method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       let tt = this.getCostPrice();
+      //       var calculateProfit = function () {
+      //         return tt * 0.2;
+      //       };
+      //       return tt + calculateProfit();
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      //2-method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       let tt = this;
+      //       var calculateProfit = function () {
+      //         return tt.getCostPrice() * 0.2;
+      //       };
+      //       return tt.getCostPrice() + calculateProfit();
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      //3-method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       var calculateProfit = function (tt) {
+      //         return tt.getCostPrice() * 0.2;
+      //       };
+      //       return this.getCostPrice() + calculateProfit(this);
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      //4-method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       var calculateProfit = function () {
+      //         return this.getCostPrice() * 0.2;
+      //       };
+      //       return this.getCostPrice() + calculateProfit.call(this);
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      //5-method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       var calculateProfit = function () {
+      //         return this.getCostPrice() * 0.2;
+      //       };
+      //       return this.getCostPrice() + calculateProfit.apply(this);
+      //       //   this.getCostPrice();
+      //     },
+      // };
+
+      //6-method
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       var calculateProfit = function () {
+      //         return this.getCostPrice() * 0.2;
+      //       };
+      //       return this.getCostPrice() + calculateProfit.bind(this)();
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      //arrow function
+      //   var cart = {
+      //     getCostPrice: function () {
+      //       return 100;
+      //     },
+      //     getSellingPrice: function () {
+      //       var calculateProfit = () => {
+      //         return this.getCostPrice() * 0.2;
+      //       };
+      //       return this.getCostPrice() + calculateProfit.bind(this)();
+      //       //   this.getCostPrice();
+      //     },
+      //   };
+
+      var getCostPrice = () => 100;
+
+      var cart = {
+        getCostPrice: () => {
+          return 100;
+        },
+        getSellingPrice: () => {
+          var calculateProfit = () => {
+            return this.getCostPrice() * 0.2;
+          };
+          return this.getCostPrice() + calculateProfit();
+          //   this.getCostPrice();
+        },
+      };
+
+      console.log(cart.getSellingPrice());
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+    <script>
+      //pre-assigned --default value of variable if no number is passed
+      function add(n1 = 0, n2 = 0) {
+        return n1 + n2;
+      }
+      //   console.log(add(4));return NaN //take value to add (4,undefine)
+      console.log(add(null, 4));
+
+      //   function add() {
+      //     let tt = 0;
+      //     for (let i = 0; i < arguments.length; i++) {
+      //       tt += arguments[i];
+      //     }
+      //     return tt;
+      //   }
+      //   console.log(add(5));
+      //   console.log(add(5, 6));
+      //   console.log(add(5, 6, 7));
+      //   console.log(add(5, 6, 7, 8));
+      //   console.log(add(5, 6, 7, 8, 9));
+      //   console.log(add(5, 6, 7, 8, 9, 2));
+
+      //Rest Parameter
+      function add(...num) {
+        let tt = 0;
+        for (let i = 0; i < num.length; i++) {
+          tt += num[i];
+        }
+        return tt;
+      }
+
+      console.log(add(5));
+      console.log(add(5, 6));
+      console.log(add(5, 6, 7));
+      console.log(add(5, 6, 7, 8));
+      console.log(add(5, 6, 7, 8, 9));
+      console.log(add(5, 6, 7, 8, 9, 2));
+
+      //spread syntax
+      function addr(...num) {
+        let tt = 0;
+        for (let i = 0; i < num.length; i++) {
+          tt += num[i];
+        }
+        return tt;
+      }
+      var arr = [1, 2, 3, 4, 5];
+      console.log(addr(...arr));
+    </script>
+  </head>
+  <body></body>
+</html>
