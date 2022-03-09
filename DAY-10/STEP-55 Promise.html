@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+
+    <script>
+      /*
+        console.log("log from line 11");
+        console.log("log from line 12");
+
+        // Asynconus
+        setTimeout(() => {
+          if (false) {
+            console.log("log from line 13");
+          } else {
+            console.error("error");
+          }
+        },2000);
+      //   console.log("log from line 13");
+        console.log("log from line 14");
+        */
+
+      let pro = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (true) {
+            resolve("Success: Resolve Message");
+          } else {
+            reject("Error: Reject Message");
+          }
+        }, 2000);
+      });
+
+      pro
+        .then((res) => {
+          console.log("Then: ", res);
+          return res.toUpperCase();
+        })
+        .then((res) => {
+          console.log("Then: ", res);
+          return res.toLowerCase();
+        })
+        .then((res) => {
+          console.log("Then: ", res);
+          return res.length;
+        })
+        .then((res) => {
+          console.log("Then: ", res);
+        })
+        .catch((error) => {
+          console.log("Catch: ", error);
+        })
+        .finally(() => {
+          console.log("Promise is Complete");
+        });
+    </script>
+  </head>
+  <body></body>
+</html>
