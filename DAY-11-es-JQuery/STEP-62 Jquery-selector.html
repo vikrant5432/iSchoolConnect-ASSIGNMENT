@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery Selector</title>
+    <script src="./lib/jquery-3.6.0.js"></script>
+    
+    <script>
+      //   alert("Hello freind");
+
+      $(() => {
+        //-------------------------------------------------------------------------------------//
+        $("li")[0].innerHTML = "Vikrant";
+        //first CSS selector and filter selector
+
+        $(".a.b").css("border", "2px solid green");
+
+        $("li:first-child:first").css("border", "2px solid red");
+
+        $("li:contains('box')").css("border", "2px dotted ");
+        //-------------------------------------------------------------------------------------//
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>list Item 1</li>
+      <li>list Item 2</li>
+      <li>list Item 3</li>
+      <li>list Item 4</li>
+      <li>list Item 5</li>
+    </ul>
+    <p class="a">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla at,
+      cupiditate quibusdam ducimus porro, incidunt ut odio dicta tempora nobis
+      eaque esse optio dignissimos necessitatibus reprehenderit placeat,
+      corrupti laborum qui?
+    </p>
+    <p class="b">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate illo
+      quia odio placeat corrupti vero amet ipsum necessitatibus error suscipit,
+      excepturi tempore, neque nam autem. Sunt quae sed nulla quis!
+    </p>
+    <p class="a b">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa nisi
+      voluptates, quisquam aliquam corrupti ut voluptatibus sapiente,
+      exercitationem deserunt doloribus ex impedit tempore at voluptas
+      cupiditate consequuntur soluta non veritatis?
+    </p>
+  </body>
+</html>

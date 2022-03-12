@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modules more</title>
+    <script type="module">
+      import Hero from "./Modules/hero.js";
+      import person from "./Modules/person.js";
+      let hero = new Hero("Naruto", "Uzamaki");
+      console.log(hero.fullName());
+      console.log(hero._secret);
+      console.log(hero.city);
+    </script>
+  </head>
+  <body></body>
+</html>
