@@ -1,0 +1,6 @@
+{
+  "cloudDB": "mongodb+srv://vikrant5432:Password$123@cluster0.u7xml.mongodb.net/iSchoolDB?retryWrites=true&w=majority",
+  "localDB": " mongodb://127.0.0.1:27017/iSchoolDB",
+  "host": "localhost",
+  "port": 5050
+}
